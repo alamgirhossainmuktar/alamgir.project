@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background: #111827;
+    color: white;
+    min-height: 76px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #f59e0b;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f59e0b;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    background: transparent;
+    border: 0;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    padding: 75px 7%;
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 24, 39, 0.95),
+            rgba(17, 24, 39, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1800&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #d97706;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: #fbbf24;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #f59e0b;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 480px;
+    color: #e5e7eb;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #f59e0b;
+    color: #111827;
+    font-weight: 700;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fbbf24;
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.section {
+    padding: 75px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    margin-bottom: 10px;
+}
+
+/* Product Cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    background: #f3f4f6;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.category {
+    color: #d97706;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.product-info h3 {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.price {
+    color: #b45309;
+    font-weight: 700;
+    font-size: 19px;
+    margin: 8px 0 16px;
+}
+
+.product-btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #111827;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.product-btn:hover {
+    background: #f59e0b;
+    color: #111827;
+}
+
+/* About */
+.about {
+    padding: 65px 7%;
+    background: #f3f4f6;
+    text-align: center;
+}
+
+.about > div {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about p:last-child {
+    color: #4b5563;
+}
+
+/* Contact */
+.contact {
+    background: white;
+}
+
+.contact-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+}
+
+.contact-card p {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a {
+    color: #b45309;
+}
+
+/* Footer */
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 22px 15px;
+    font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        border-top: 1px solid #374151;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 55px 6%;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: 260px;
+    }
+
+    .about {
+        padding: 50px 6%;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+}
+
+
+
+৪. script.js — মোবাইল মেনু চালু করা
+এবার script.js ফাইলে নিচের কোড বসাও। মোবাইলে ☰ বাটনে ক্লিক করলে মেনু খুলবে, আবার ক্লিক করলে বন্ধ হবে।
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+// মেনু খোলা ও বন্ধ করা
+menuBtn.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("show");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+    menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "মেনু বন্ধ করুন" : "মেনু খুলুন"
+    );
+
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+});
+
+// মেনুর লিংকে ক্লিক করলে মেনু বন্ধ হবে
+navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "মেনু খুলুন");
+        menuBtn.textContent = "☰";
+    });
+});
